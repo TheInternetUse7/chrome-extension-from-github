@@ -25,19 +25,19 @@ pip install requests
 
 2. Replace `extension_path` with the path to the directory where you want to extract the extension files.
 
-3. Run the script regularly to check for updates and download the latest version of the extension.
+3. Run the script regularly to check for updates and download the latest version of the extension. You can automate this process using a task scheduler or cron job, or you can manually run the script whenever you want to check for updates.
 
-## Loading the Extension into Chrome
+# Loading the Extension into Chrome
 
-After running the script, you'll need to load the extension into Chrome. You can do this manually by opening Chrome, navigating to `chrome://extensions`, enabling "Developer mode", clicking "Load unpacked", and selecting the directory where the extension files are located.
+After the script has downloaded and extracted the extension, you’ll need to manually load the extension into Chrome. Here’s how:
 
-If you want to load the extension automatically when Chrome starts, you can modify the shortcut you use to open Chrome to include the `--load-extension` argument followed by the path to the extension directory. For example:
+1. Open Chrome and navigate to `chrome://extensions`.
 
-```
-"C:\Program Files\Google\Chrome\Application\chrome.exe" --load-extension=C:\path\to\extension
-```
+2. Enable “Developer mode”.
 
-Please note that this will only load the extension for the current session, and it will not persist after Chrome is closed. If you completely exit Chrome or restart your computer, you'll need to open Chrome using this shortcut again to load the extension.
+3. Click “Load unpacked” and select the directory where the extension files were extracted by the script.
+
+Chrome should now load the extension, and it will continue to do so every time it starts up, as long as the location of the extension files remains the same. This means that whenever the script downloads a new version of the extension, Chrome will automatically load the updated version the next time it starts.
 
 ## Disclaimer
 
